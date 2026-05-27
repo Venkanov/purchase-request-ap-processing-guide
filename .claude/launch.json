@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ASC 606 & 842 Research Tool",
+      "runtimeExecutable": "/tmp/node-v20.11.0-darwin-arm64/bin/npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 3000,
+      "env": {
+        "PATH": "/tmp/node-v20.11.0-darwin-arm64/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+      }
+    }
+  ]
+}
