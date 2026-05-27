@@ -190,12 +190,61 @@ export function QueryPanel({
         throw new Error(errData.error ?? `HTTP ${res.status}: ${res.statusText}`)
       }
 
-      const data: QueryResponse = await res.json()
-      onResponse(data)
+      // Read the SSE stream
+      const reader = res.body!.getReader()
+      const decoder = new TextDecoder()
+      let buffer = ''
+      let markdown = ''
+
+      while (true) {
+        const { done, value } = await reader.read()
+        if (done) break
+
+        buffer += decoder.decode(value, { stream: true })
+        const parts = buffer.split('\n\n')
+        buffer = parts.pop() ?? ''
+
+        for (const part of parts) {
+          if (!part.startsWith('data: ')) continue
+          let event: Record<string, unknown>
+          try {
+            event = JSON.parse(part.slice(6))
+          } catch {
+            continue
+          }
+
+          if (event.type === 'delta') {
+            markdown += event.text as string
+            // Show progressive text in the response panel while streaming
+            onResponse({
+              id: 'streaming',
+              mode: activeTab,
+              format,
+              markdown,
+              citations: [],
+              timestamp: new Date().toISOString(),
+            })
+          } else if (event.type === 'done') {
+            onResponse({
+              id: event.id as string,
+              mode: activeTab,
+              format,
+              markdown,
+              citations: (event.citations ?? []) as QueryResponse['citations'],
+              reviewComments: event.reviewComments as QueryResponse['reviewComments'],
+              riskFlags: event.riskFlags as QueryResponse['riskFlags'],
+              obligationsMatrix: event.obligationsMatrix as QueryResponse['obligationsMatrix'],
+              missingDataItems: event.missingDataItems as QueryResponse['missingDataItems'],
+              timestamp: event.timestamp as string,
+            })
+          } else if (event.type === 'error') {
+            throw new Error(event.message as string)
+          }
+        }
+      }
     } catch (err) {
       const message = err instanceof Error ? err.message : 'An unexpected error occurred.'
       showToast('Query Failed', message, 'destructive')
-      // Surface the error in the response panel too
       onResponse({
         id: `error-${Date.now()}`,
         mode: activeTab,

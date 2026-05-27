@@ -17,7 +17,7 @@ import type {
 
 const QUERY_MODES: QueryMode[] = ['specific', 'scenario', 'review', 'contract']
 const OUTPUT_FORMATS: OutputFormat[] = ['detailed', 'tldr', 'onepager', 'memo']
-const CLAUDE_MODELS: ClaudeModel[] = ['claude-opus-4-6', 'claude-sonnet-4-6']
+const CLAUDE_MODELS: ClaudeModel[] = ['claude-opus-4-7', 'claude-opus-4-6', 'claude-sonnet-4-6']
 const SOURCE_POOLS: SourcePool[] = ['guidance', 'review', 'contract']
 const DOCUMENT_TYPES: DocumentType[] = ['pdf', 'docx', 'xlsx', 'pptx', 'txt', 'link']
 
