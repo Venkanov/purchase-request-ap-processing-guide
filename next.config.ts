@@ -7,15 +7,6 @@ const nextConfig: NextConfig = {
       bodySizeLimit: '50mb',
     },
   },
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/zip-guides',
-        permanent: false,
-      },
-    ]
-  },
 };
 
 export default nextConfig;

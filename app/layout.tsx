@@ -3,9 +3,9 @@ import { Toaster } from '@/components/ui/toaster'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Purchase Request & AP Processing Guide',
+  title: 'Accounting Research Portal | ASC 606 & ASC 842',
   description:
-    'FluidStack internal guide for purchase requests and AP invoice processing in Zip and NetSuite',
+    'Technical accounting research and document review for ASC 606 Revenue Recognition and ASC 842 Leases',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

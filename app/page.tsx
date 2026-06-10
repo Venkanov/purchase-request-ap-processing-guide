@@ -100,7 +100,16 @@ export default function Home() {
             A
           </div>
           <span className="font-semibold text-sm tracking-tight text-slate-900">
-            Purchase Request & AP Processing Guide
+            Accounting Research Portal
+          </span>
+          <span
+            className="hidden sm:inline text-xs px-1.5 py-0.5 rounded font-medium"
+            style={{
+              backgroundColor: 'rgb(241 245 249)',
+              color: 'rgb(71 85 105)',
+            }}
+          >
+            ASC 606 &amp; ASC 842
           </span>
         </div>
 
@@ -138,10 +147,10 @@ export default function Home() {
               style={{ borderColor: 'rgb(226 232 240)' }}
             >
               <h1 className="text-sm font-semibold leading-tight text-slate-900">
-                Purchase Request & AP Processing Guide
+                Research Portal
               </h1>
               <p className="text-xs mt-0.5 text-slate-500">
-                FluidStack internal guide for Zip & NetSuite
+                ASC 606 / ASC 842 Research, Review &amp; Contract Analysis
               </p>
             </div>
 
