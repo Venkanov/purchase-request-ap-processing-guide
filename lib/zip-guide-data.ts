@@ -40,6 +40,7 @@ const poGuide: Guide = {
   description:
     'Walks you through the process of submitting a purchase request in Zip — from initiating the request and completing the questionnaire to uploading supporting documents and obtaining approvals.',
   quickReference: [
+    { task: 'How to access ZIP?', whereTo: 'Zip web application → Okta Login → Zip Home → + New Request', tabLink: 'initiating', sectionLink: 'initiating' },
     { task: 'Start a new purchase request', whereTo: 'Home screen → + New request → Request a Purchase', tabLink: 'initiating', sectionLink: 'initiating' },
     { task: 'Submit on behalf of another employee', whereTo: 'Question 1 — Who is the requester?', tabLink: 'questionnaire', sectionLink: 'q1-requester' },
     { task: 'Check for existing software licenses', whereTo: 'Current Software List', tabLink: 'questionnaire', sectionLink: 'q4-category' },
