@@ -582,10 +582,12 @@ function GuideView({ guide, onBack }: { guide: Guide; onBack: () => void }) {
       setTimeout(() => {
         const el = document.getElementById(`section-${sectionId}`)
         if (el && contentRef.current) {
-          const top = el.offsetTop - 16
+          const containerRect = contentRef.current.getBoundingClientRect()
+          const elRect = el.getBoundingClientRect()
+          const top = contentRef.current.scrollTop + (elRect.top - containerRect.top) - 16
           contentRef.current.scrollTo({ top, behavior: 'smooth' })
         }
-      }, 80)
+      }, 120)
     }
   }, [])
 
