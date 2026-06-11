@@ -312,29 +312,40 @@ Select either **Item** or **Expense**:
 - Use **Item** for physical products that are shipped and tracked by quantity (e.g., servers, hardware)
 - Use **Expense** for services and other charges such as shipping, installation, or sales tax
 
-**c) Quantity and Amount**
-Enter the quantity of units being ordered and the unit amount. Zip will calculate the line total automatically. If the exact amount is not yet known, enter your best estimate.
+**c) Quantity**
+Enter the quantity of units being ordered and the unit amount. Zip will calculate the line total automatically. If the exact amount is not yet known, enter your best estimate. We can always make adjustments if necessary.
 
 **d) Amount**
 Enter the dollar amount for the line item. If the exact amount is not yet known, enter your best estimate.
 
 **e) Code**
-Select the appropriate account code from the chart of accounts. This determines how the purchase is classified in the general ledger (e.g., 15040 Servers & Switches, 60660 Postage, Freight, Courier, Sales Taxes Payable TX). If you are unsure which code to use, reach out to the **Accounting team** before submitting.
+Select the appropriate account code from the chart of accounts. This determines how the purchase is classified in the general ledger (e.g., *15040 Servers & Switches*).
+
+> 🚨 **Important:** For **shipping** and **sales tax** associated with an **asset purchase**, under accounting rules, the **total cost of a fixed asset includes more than just the purchase price**. Any **additional costs** required to get the asset delivered and ready for use — such as **sales tax, shipping and handling, and installation costs** — **should be coded to the same asset account**. This ensures the full cost of the asset is accurately recorded.
+
+> 🚨 **Important:** Per FluidStack's asset capitalization policy, if an individual asset falls below **$5,000 at the individual unit/quantity level**, it does not meet the capitalization threshold and cannot be recorded as a fixed asset. In this case, **select the appropriate uncapitalized equipment account** based on the nature of the purchase:
+> - **52300 Uncapitalized Equipment (Equipment)** — For data center related asset purchases that fall below the capitalization threshold.
+> - **61505 Uncapitalized Equipment - R&D** — For lab or testing equipment purchased for research and development purposes.
+> - **62050 Uncapitalized Computer Equipment** — For non-data center related assets such as laptops and other general computer equipment.
+>
+> Always verify the unit price of each individual asset before selecting the account code.
+>
+> **Example:** An invoice is received for 50 network switches at $4,500.00 per unit, totaling $225,000.00. Although the total invoice amount is significant, since the unit price of each individual switch is $4,500.00 — below the $5,000 threshold — this purchase should be coded to **52300 Uncapitalized Equipment (Equipment)** as it is a data center related asset.
+
+**Note: If you are unsure which code to use, reach out to the Accounting team before submitting to ensure correct coding from the start.**
 
 **f) Item Account**
-This field applies to purchases that will be capitalized as assets on FluidStack's books (e.g., servers and switches). If you are purchasing a physical asset owned by FluidStack, select the appropriate asset account (e.g., FA - Servers & Switches). This field is not required for expense-type line items.
+This field applies to purchases that will be capitalized as assets on FluidStack's books (e.g., servers and switches). If you are purchasing a physical asset owned by FluidStack, select the appropriate asset account (e.g., *FA - Servers & Switches. As a reference point - asset accounts always start with 1*). This field is not required for expense-type line items. **If you are unsure which code to use, reach out to the Accounting team before submitting to ensure correct coding from the start.**
 
 **g) Department**
 Select your department or the department you are ordering on behalf of (e.g., Technology & Infrastructure : Data Centers).
 
 **h) FluidStack Location**
-Select the same location you entered in Question 2.
+Select the same location you entered in "Question 2: Which location is this purchase for?"
 
 Click **Save** on each line item before adding the next one.
 
-**Example:** A hardware purchase may have three lines — one for the equipment itself (Line Type: Item), one for estimated shipping (Line Type: Expense), and one for estimated sales tax (Line Type: Expense), each coded and tagged to the appropriate department and location.
-
-Once all line items are saved, Zip will display a summary showing each line and its total, along with the overall Line Item Total. You can edit, duplicate, or delete any line item at any time using the icons on the right before submitting the request.`,
+**Example:** A hardware purchase may have three lines — one for the equipment itself (Line Type: Item), one for estimated shipping (Line Type: Expense), and one for estimated sales tax (Line Type: Expense), each coded and tagged to the appropriate department and location.`,
 
       images: [
         { file: 'po-20-36d33516.png', caption: 'Question 9 — Line item breakdown: Step 1' },
