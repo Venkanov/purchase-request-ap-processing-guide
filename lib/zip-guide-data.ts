@@ -49,7 +49,7 @@ const poGuide: Guide = {
     { task: 'Add items to purchase', whereTo: 'Question 9 — Please enter the line item breakdown', tabLink: 'questionnaire', sectionLink: 'q9-line-items' },
     { task: 'Look up account codes for line items', whereTo: 'Contact the Accounting team' },
     { task: 'Check payment terms', whereTo: 'Default is Net 60 — see Question 18', tabLink: 'questionnaire', sectionLink: 'q18-payment-terms' },
-    { task: 'Track your request after submission', whereTo: 'No PO = No Pay — see Question 19', tabLink: 'questionnaire', sectionLink: 'q19-payment-method' },
+    { task: 'Payment method', whereTo: 'No PO = No Pay — see Question 19', tabLink: 'questionnaire', sectionLink: 'q19-payment-method' },
     { task: 'Check payment method policy', whereTo: 'Home screen → My requests' },
   ],
   tableOfContents: [
