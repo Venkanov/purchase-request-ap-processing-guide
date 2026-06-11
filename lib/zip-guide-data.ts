@@ -219,7 +219,7 @@ Select the option that best describes the nature of this software purchase:
       title: 'Question 5 — Please select the detailed category',
       level: 3,
       content: `After selecting a top-level purchase category, you will be prompted to choose a more specific subcategory. The options shown will vary depending on your selection in the previous question.`,
-      contentAfter: `For example, if you selected Hardware - DC, the above categories appear.
+      contentAfter: `For example, if you selected Hardware - DC, the below categories appear.
 
 > **Note:** The subcategory options will be different for other top-level categories such as Hardware - DC, Software or Professional Services etc. Always select the option that most accurately reflects what is being purchased.
 
