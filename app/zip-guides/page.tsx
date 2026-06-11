@@ -130,11 +130,13 @@ function GuideMarkdown({ content, onNavigate }: { content: string; onNavigate?: 
         a: ({ href, children }) => {
           // Internal tab navigation links: [Label](tab:tab-id)
           if (href?.startsWith('tab:')) {
-            const tabId = href.slice(4)
+            const parts = href.slice(4).split(':')
+            const tabId = parts[0]
+            const sectionId = parts[1] ?? undefined
             if (onNavigate) {
               return (
                 <button
-                  onClick={() => onNavigate(tabId)}
+                  onClick={() => onNavigate(tabId, sectionId)}
                   className="inline-flex items-center gap-1 font-medium rounded px-1.5 py-0.5 text-sm transition-colors"
                   style={{ color: 'rgb(99 102 241)', backgroundColor: 'rgb(238 242 255)' }}
                 >
