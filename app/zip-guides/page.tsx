@@ -129,20 +129,24 @@ function GuideMarkdown({ content, onNavigate }: { content: string; onNavigate?: 
         ),
         a: ({ href, children }) => {
           // Internal tab navigation links: [Label](tab:tab-id)
-          if (href?.startsWith('tab:') && onNavigate) {
+          if (href?.startsWith('tab:')) {
             const tabId = href.slice(4)
-            return (
-              <button
-                onClick={() => onNavigate(tabId)}
-                className="inline-flex items-center gap-1 font-medium rounded px-1.5 py-0.5 text-sm transition-colors"
-                style={{ color: 'rgb(99 102 241)', backgroundColor: 'rgb(238 242 255)' }}
-              >
-                {children}
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor" className="w-3 h-3 opacity-70">
-                  <path fillRule="evenodd" d="M4.22 3.22a.75.75 0 0 1 1.06 0l3 3a.75.75 0 0 1 0 1.06l-3 3a.75.75 0 0 1-1.06-1.06L6.94 6.5 4.22 3.78a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
-                </svg>
-              </button>
-            )
+            if (onNavigate) {
+              return (
+                <button
+                  onClick={() => onNavigate(tabId)}
+                  className="inline-flex items-center gap-1 font-medium rounded px-1.5 py-0.5 text-sm transition-colors"
+                  style={{ color: 'rgb(99 102 241)', backgroundColor: 'rgb(238 242 255)' }}
+                >
+                  {children}
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="currentColor" className="w-3 h-3 opacity-70">
+                    <path fillRule="evenodd" d="M4.22 3.22a.75.75 0 0 1 1.06 0l3 3a.75.75 0 0 1 0 1.06l-3 3a.75.75 0 0 1-1.06-1.06L6.94 6.5 4.22 3.78a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
+                  </svg>
+                </button>
+              )
+            }
+            // No navigation context — render as plain styled text (no broken link)
+            return <span className="font-medium" style={{ color: 'rgb(99 102 241)' }}>{children}</span>
           }
           return (
             <a href={href} target="_blank" rel="noopener noreferrer"
