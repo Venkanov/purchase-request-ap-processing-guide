@@ -65,6 +65,14 @@ const poGuide: Guide = {
       level: 1,
       content: `## How to Start a Purchase Request
 
+**What is a Purchase Request?** A purchase request is a formal request submitted in Zip by an employee to initiate the purchase of goods or services from a vendor. Once approved, Zip automatically generates a purchase order (PO).
+
+**When is it Required?** A purchase request is required any time an employee needs to procure goods or services on behalf of FluidStack. In line with FluidStack's **No PO, No Pay** policy, a purchase request must be approved before a vendor invoice can be processed for payment.
+
+**Who is Responsible?** The employee requesting the goods or services is responsible for submitting the purchase request in Zip. The Finance & Accounting team is responsible for the downstream AP processing of approved requests.
+
+---
+
 **Step 1: Access Zip and Start a New Request**
 
 - Log in to Zip at FluidStack's Zip instance
