@@ -176,7 +176,7 @@ We will walk through each section and every question in detail in the steps that
 
 ### Additional Guidance for Software Purchases
 
-> ⚠️ **STOP — Software Purchases Only:** Before submitting a request for software, you must first review the **Current Software List** to check if FluidStack already has the tool you need or if an alternative is already in place. Only proceed with a new software request if nothing on the list meets your needs.
+> ⚠️ **STOP — Software Purchases Only:** Before submitting a request for software, you must first review the [**Current Software List**](https://fluidstack.atlassian.net/wiki/spaces/its/pages/336003105/Fluidstack+Application+Directory) to check if FluidStack already has the tool you need or if an alternative is already in place. Only proceed with a new software request if nothing on the list meets your needs.
 
 **Step 1 — Check for Similar or Existing Software Solutions**
 
