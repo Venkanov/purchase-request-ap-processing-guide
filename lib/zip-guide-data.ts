@@ -220,7 +220,9 @@ Select the option that best describes the nature of this software purchase:
       level: 3,
       content: `After selecting a top-level purchase category, you will be prompted to choose a more specific subcategory. The options shown will vary depending on your selection in the previous question.
 
-> **Note:** The subcategory options will be different for other top-level categories such as Hardware - DC, Software or Professional Services etc. Always select the option that most accurately reflects what is being purchased.`,
+> **Note:** The subcategory options will be different for other top-level categories such as Hardware - DC, Software or Professional Services etc. Always select the option that most accurately reflects what is being purchased.
+
+If you are unsure which category or subcategory to select, reach out to your manager or the FluidStack Accounting team for guidance before submitting the request.`,
     
       images: [
         { file: 'po-12-e274978e.png', caption: 'Question 5 — Select the detailed category' },
