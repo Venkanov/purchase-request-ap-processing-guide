@@ -97,11 +97,11 @@ const poGuide: Guide = {
 
 After selecting Request a Purchase, you will be taken to a multi-section questionnaire. The form is organized into three sections, visible in the left-hand navigation:
 
-- [General Information](#general-information) — Basic request details, vendor, coding
-- [IT & Security Information](#it-security) — Security questionnaire and NDA
-- [Documents](#documents) — Supporting files and attachments
+- [General Information](tab:questionnaire) — Basic request details, vendor, coding
+- [IT & Security Information](tab:it-security) — Security questionnaire and NDA
+- [Documents](tab:documents) — Supporting files and attachments
 
-We will walk through each section and every question in detail in the steps that follow. Use the **Purchase Request Questionnaire** tab above for the full step-by-step walkthrough.`,
+We will walk through each section and every question in detail in the steps that follow. Use the [Purchase Request Questionnaire](tab:questionnaire) tab above for the full step-by-step walkthrough.`,
     },
     {
       id: 'questionnaire',
