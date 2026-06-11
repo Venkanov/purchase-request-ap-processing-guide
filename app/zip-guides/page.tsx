@@ -199,7 +199,7 @@ function SectionBlock({ section, onNavigate }: { section: Section; onNavigate?: 
           const sizeClass = img.size === 'small' ? 'max-w-[220px]' : img.size === 'medium' ? 'max-w-sm' : 'w-full'
           const src = `/zip-guide-images/${img.file}`
           return (
-            <figure key={key} className={`rounded-lg overflow-hidden border group ${img.size === 'small' ? 'inline-block my-2' : 'my-0'}`} style={{ borderColor: 'rgb(226 232 240)' }}>
+            <figure key={key} className={`rounded-lg overflow-hidden border group ${img.size === 'small' ? 'inline-block my-2' : 'my-4'}`} style={{ borderColor: 'rgb(226 232 240)' }}>
               <button
                 type="button"
                 className="block w-full text-left relative cursor-zoom-in"
@@ -310,7 +310,7 @@ function SectionBlock({ section, onNavigate }: { section: Section; onNavigate?: 
               </div>
             )
           }
-          return token ? <GuideMarkdown key={`text-${i}`} content={token} onNavigate={onNavigate} /> : null
+          return token?.trim() ? <div key={`text-${i}`} className="mt-2"><GuideMarkdown content={token} onNavigate={onNavigate} /></div> : null
         }
 
         return (
@@ -367,7 +367,7 @@ function SectionBlock({ section, onNavigate }: { section: Section; onNavigate?: 
           </>
         )
       })()}
-      {section.contentAfter && <div className="mt-4"><GuideMarkdown content={section.contentAfter} onNavigate={onNavigate} /></div>}
+      {section.contentAfter && <div className="mt-6 pt-2 border-t" style={{ borderColor: 'rgb(241 245 249)' }}><GuideMarkdown content={section.contentAfter} onNavigate={onNavigate} /></div>}
 
       {/* Lightbox overlay */}
       {lightbox && (
