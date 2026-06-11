@@ -128,7 +128,13 @@ We will walk through each section and every question in detail in the steps that
       level: 3,
       content: `Select the FluidStack location this purchase is intended for. The dropdown includes all company sites across regions — for example, office locations such as NYC Office or ATX Office, as well as data center sites such as BUF1 [Lake Mariner] or SNK1 [Barber Lake].
 
-> ⚠️ **Important:** Choose your location carefully. Your location selection will automatically populate the subsidiary field, or in some cases you will have the option to choose a subsidiary (Question 3), which is tied to the cost centers used for financial coding. Selecting the wrong location may result in the purchase being coded to the wrong entity or cost center.`,
+> 🚨 **Important: Choose your location carefully.** Your **location selection** will automatically populate the subsidiary field, or in some cases you will have the option to [choose a subsidiary (Question 3)](#q3-subsidiary), which is tied to the cost centers used for financial coding. Selecting the wrong location will result in the purchase being coded to the wrong entity or cost center, which causes downstream issues during invoice processing, financial reporting, and month-end close — and will require corrections that delay payment.
+
+**Not sure which location to select?**
+
+- **As the requester**, you should **know which location this purchase is intended for** — this is the site or office that will receive, use, or benefit from the goods or services being purchased.
+- If you are purchasing for multiple locations, a **separate purchase request and PO must be created for each location**. A **single PO** should only ever be **tied to one location**, as each location corresponds to a different subsidiary and cost center.
+- **If you are unsure, do not guess.** Check with your manager before submitting the request.`,
     
       images: [
         { file: 'po-05-631d0302.png', caption: 'Question 2 — Which location is this purchase for?' },
