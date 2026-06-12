@@ -76,7 +76,7 @@ const GUIDE_TABS: Record<string, typeof PO_TABS> = {
 
 // ─── Markdown renderer ────────────────────────────────────────────────────────
 
-function GuideMarkdown({ content, onNavigate }: { content: string; onNavigate?: (tabId: string) => void }) {
+function GuideMarkdown({ content, onNavigate }: { content: string; onNavigate?: (tabId: string, sectionId?: string) => void }) {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
@@ -164,7 +164,7 @@ function GuideMarkdown({ content, onNavigate }: { content: string; onNavigate?: 
 
 // ─── Section block ────────────────────────────────────────────────────────────
 
-function SectionBlock({ section, onNavigate }: { section: Section; onNavigate?: (tabId: string) => void }) {
+function SectionBlock({ section, onNavigate }: { section: Section; onNavigate?: (tabId: string, sectionId?: string) => void }) {
   const [lightbox, setLightbox] = useState<{ src: string; caption?: string; guidance?: React.ReactNode } | null>(null)
 
   const levelClass =
